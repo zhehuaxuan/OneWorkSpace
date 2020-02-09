@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Nav from './views/nav';
+import Home from './views/content';
 import getRouter from './router';
+import 'antd/dist/antd.css';
+import { Layout } from 'antd';
+
 
 class App extends Component {
     constructor(props) {
@@ -10,14 +14,14 @@ class App extends Component {
 
     render() {
         return (
-            <div>
-            <Router>
+            <Layout>
                 <Nav />
-                {getRouter()}
-            </Router></div>
+                <Home />
+            </Layout>
         )
     }
 }
+
 
 
 
